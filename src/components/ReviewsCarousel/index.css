@@ -1,0 +1,43 @@
+/* Write your code here */
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/reviews-bg.png');
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+.profile-img {
+  height: 30%;
+  width: 30%;
+  border-radius: auto;
+  align-self: center;
+}
+
+.button-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  align-items: space-between;
+}
+
+.button {
+  background-color: transparent;
+
+  color: white;
+  border-color: #ffffff;
+
+  height: 30%;
+  width: 30%;
+  border-radius: auto;
+}
+
+.arrow-img {
+  height: 25%;
+  width: 30%;
+  padding: 3px;
+  color: white;
+}
