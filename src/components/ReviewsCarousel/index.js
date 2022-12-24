@@ -8,11 +8,7 @@ class ReviewsCarousel extends Component {
   previousProfile = () => {
     const {index} = this.state
 
-    if (index === 0) {
-      this.setState({
-        index: 0,
-      })
-    } else{
+    if (index > 0) {
       this.setState(prevState => ({
         index: prevState.index - 1,
       }))
@@ -23,11 +19,7 @@ class ReviewsCarousel extends Component {
     const {index, list} = this.state
     const maxLength = list.reviewsList.length
 
-    if (index === maxLength - 1) {
-      this.setState({
-        index: maxLength - 1,
-      })
-    } else {
+    if (index < maxLength) {
       this.setState(prevState => ({
         index: prevState.index + 1,
       }))
@@ -36,8 +28,10 @@ class ReviewsCarousel extends Component {
 
   render() {
     const {index, list} = this.state
+    const {reviewsList} = list
 
-    const reviewItem = list.reviewsList[index]
+    const reviewItem = reviewsList[index]
+    console.log(reviewItem)
 
     const {imgUrl, username, companyName, description} = reviewItem
 
@@ -47,10 +41,10 @@ class ReviewsCarousel extends Component {
         <img src={imgUrl} alt={username} className="profile-img" />
         <div className="button-cont">
           <button
+            testid="leftArrow"
             className="button"
             type="button"
             onClick={this.previousProfile}
-            testid="leftArrow"
           >
             <img
               src="https://assets.ccbp.in/frontend/react-js/left-arrow-img.png"
@@ -60,10 +54,10 @@ class ReviewsCarousel extends Component {
           </button>
           <p>{companyName}</p>
           <button
+            testid="rightArrow"
             className="button"
             type="button"
             onClick={this.nextProfile}
-            testid="rightArrow"
           >
             <img
               src="https://assets.ccbp.in/frontend/react-js/right-arrow-img.png"
