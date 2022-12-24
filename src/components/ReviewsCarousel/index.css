@@ -14,6 +14,8 @@
   width: 30%;
   border-radius: auto;
   align-self: center;
+  margin: 5px;
+  padding: 2px;
 }
 
 .button-cont {
@@ -26,18 +28,12 @@
 
 .button {
   background-color: transparent;
-
   color: white;
-  border-color: #ffffff;
-
-  height: 30%;
-  width: 30%;
-  border-radius: auto;
+  border-style: none;
+  align-items: center;
 }
 
 .arrow-img {
-  height: 25%;
-  width: 30%;
   padding: 3px;
   color: white;
 }
