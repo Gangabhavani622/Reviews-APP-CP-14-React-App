@@ -12,7 +12,7 @@ class ReviewsCarousel extends Component {
       this.setState({
         index: 0,
       })
-    } else if (index > 0) {
+    } else{
       this.setState(prevState => ({
         index: prevState.index - 1,
       }))
@@ -27,7 +27,7 @@ class ReviewsCarousel extends Component {
       this.setState({
         index: maxLength - 1,
       })
-    } else if (index < maxLength) {
+    } else {
       this.setState(prevState => ({
         index: prevState.index + 1,
       }))
@@ -50,7 +50,7 @@ class ReviewsCarousel extends Component {
             className="button"
             type="button"
             onClick={this.previousProfile}
-            testId="leftArrow"
+            testid="leftArrow"
           >
             <img
               src="https://assets.ccbp.in/frontend/react-js/left-arrow-img.png"
@@ -63,7 +63,7 @@ class ReviewsCarousel extends Component {
             className="button"
             type="button"
             onClick={this.nextProfile}
-            testId="rightArrow"
+            testid="rightArrow"
           >
             <img
               src="https://assets.ccbp.in/frontend/react-js/right-arrow-img.png"
